@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Gudea|Lora|Monsieur+La+Doulaise|Roboto|Scheherazade|Tangerine&display=swap');
+
+/* @import url('http://fonts.useso.com/css?family=Dancing+Script|Gudea|Lora|Monsieur+La+Doulaise|Roboto|Scheherazade|Tangerine&display=swap'); */
+
+
+/* Constants - change these to change the look and feel */
+:root{
+  /* fonts */
+  --font-cursive: 'Dancing Script';
+  --font-sansserif: 'Robota', sans-serif;
+  --font-serif:'Scheheradze', serif;
+  /* colours */
+  --bg-dark-primary: #141e28;
+  --bg-dark-highlight: #a3c1e0;
+
+  --bg-light-primary: #fff; 
+
+  --txt-dark-primary: #333366;
+  --txt-light-primary:  #efeff9;
+}
+
+/* Defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--font-sansserif);
+  color: var(--txt-dark-primary);
+}
+a {
+  text-decoration: none;
+}
+
+/* Utilities */
+.cursive {
+  font-family: var(--font-cursive);
+}
+.serif {
+  font-family: var(--font-serif);
+}
+
+.sans-serif {
+  font-family: var(--font-sansserif);
+}
+.l-heading {
+  font-size: 3rem;
+  margin-bottom: 0.9rem;
+  line-height: 1.1;
+}
+
+.lead{
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.txt-large { font-size: 2rem }
+.txt-small { font-size: 0.8rem }
+
+.py1 { padding: 1.5rem 0 }
+.py2 { padding: 2rem 0 }
+.py3 { padding: 2rem 0 }
+
+
+/* Header Bar */
+  #head-bar{
+    display: flex;
+    background: var(--bg-light-primary);
+    justify-content: space-between; 
+  }
+  #head-bar img{
+    display: block; 
+    width: 120px;
+    height: 80px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    border-style: solid;
+    border-color: var(--bg-dark-primary);
+    border-width: 2px;
+  }
+  #head-bar h1{
+    text-align: center;
+    margin-top:auto;
+    margin-bottom: auto;
+  }
+  #head-bar ul{
+     list-style: none;
+     margin-top:auto;
+     margin-bottom: auto;
+     margin-right: 25px
+  }
+
+  #head-bar ul li{
+    color: var(--txt-dark-primary);
+    font-size: 1.2rem;
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
+  }
+  #head-bar ul li:last-child{
+    text-align: right;
+    font-style: italic;
+  }
+  /* NavBar */
+  #navbar{
+    display: flex;
+    position: sticky;
+    top:0;
+    background: var(--bg-dark-primary);
+    z-index: 1;
+  }
+
+  #navbar ul{
+    display:flex;
+    justify-content: space-evenly;
+    margin: auto;
+    align-items: center;
+    list-style: none;
+  }
+
+  #navbar ul li {
+    color: var(--txt-light-primary);
+    padding: 0.4rem;
+    margin-left: 2rem;
+    position: relative
+  }
+
+  #navbar ul li a {
+    color: var(--txt-light-primary);
+    padding: 0.4rem;
+    margin: 3px 0;
+    /* padding-left: 2rem; */
+  }
+
+  #navbar ul li.current a {
+    border-bottom: solid;
+    border-color: var(--txt-dark-primary);
+  }
+  /* #navbar ul li i{
+    margin-left: 0.3rem;
+  } */
+
+  #navbar ul li a:hover {
+    background: var(--bg-dark-highlight);
+    color: #333366;
+    border-radius: 1px;
+  }
+
+/* Sub menus hidden by default*/
+  
+  #navbar ul li.dropdown:hover {
+    cursor: pointer;
+    background: var(--bg-dark-highlight)0;
+    color: var(--txt-dark-primary);
+    border-radius: 1px;
+  }
+  .submenu-cottages {
+    display: none;
+  }
+  #navbar ul li.dropdown:hover .submenu-cottages {
+    display: block;
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    margin-top: 0.4rem;
+    margin-bottom: 0.2rem;
+    /* margin-left: 0.3rem; */
+    width: 365px;
+    background: var(--bg-dark-primary);
+    color: var(--txt-dark-primary);
+    display: grid;
+      grid-template-columns: 1fr;
+      /* grid-template-rows: repeat(4,100px); */
+      /* grid-row-gap: 0.1rem; */
+    padding: 5px;
+    /* padding-top: 7px; */
+    transition: visibility 1s ease-in-out;
+  }
+
+  .card {
+    display: grid;
+      grid-template-columns: 2fr 3fr;
+      grid-row-gap: 0.5rem;
+    background: var(--bg-light-primary);
+    padding: 0.1rem;
+  }
+
+  #navbar ul li.dropdown:hover .submenu-cottages .card:hover {
+    background: var(--txt-light-primary);
+  }
+
+  .box{ 
+    display: block;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    /* text-decoration: none; */
+  }
+  .textbox{
+    margin-top: 1.2rem;
+    color: var(--txt-dark-primary);
+  }
+
+  .submenu-cottages .card * img {
+    display: block;
+    overflow: hidden;
+    width: 143px;
+    height: 95px;
+  }
+
+/* Showcase */
+
+  #showcase {
+  background: url('/assets/img/Home/green-grass-field-2127921.jpg') no-repeat center center;
+  background-size: cover;
+  height: 88vh;
+  overflow: hidden;
+  }
+
+  #showcase .showcase-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 2rem;
+  overflow: hidden;
+  background-color: rgba(255,255,255, 0.3);
+  }
+
+  #showcase p i {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  }
+
+/* Articles */
+
+#articles {
+  max-width: 1300px;
+  margin: auto;
+}
+
+
+#articles .article-container {
+  display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap: 1rem;
+background: #fff
+}
+
+.article {
+  background: var(--txt-light-primary);
+  padding: 1rem;
+}
+
+.article ul li {
+  line-height: 1.5rem;
+}
+.article-image {
+  display: block;
+  overflow: hidden;
+  max-width: 400px;
+}
+
+.article-right {
+  grid-column: 2 / span 2;
+}
+
+.article-left {
+  grid-column: 1 / span 2;
+}
+.article-span {
+  grid-column: 1 / span 3;
+}
+
+#list-cottages {
+  display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-row-gap: 0.5rem;
+}
+
+#list-cottages img {
+  display: block;
+  overflow: hidden;
+  width: 203px;
+  height: 125px;
+}
+/* Footer */
