@@ -60,7 +60,13 @@ a {
 
 .py1 { padding: 1.5rem 0 }
 .py2 { padding: 2rem 0 }
-.py3 { padding: 2rem 0 }
+.py3 { padding: 3rem 0 }
+.py4 { padding: 0.5rem 0}
+
+.pb1 { padding-bottom: 1.5rem }
+.pb2 { padding-bottom: 2rem }
+.pb3 { padding-bottom: 3rem }
+.pb4 { padding-bottom: 0.5rem }
 
 
 /* Header Bar */
@@ -247,7 +253,7 @@ a {
   display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-row-gap: 1rem;
-background: #fff
+  background: #fff
 }
 
 .article {
@@ -261,7 +267,8 @@ background: #fff
 .article-image {
   display: block;
   overflow: hidden;
-  max-width: 400px;
+  width: 400px;
+  height:264px;
 }
 
 .article-right {
