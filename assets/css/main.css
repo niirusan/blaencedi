@@ -11,7 +11,10 @@
   --font-serif:'Scheheradze', serif;
   /* colours */
   --bg-dark-primary: #141e28;
-  --bg-dark-highlight: #efeff9;
+  --bg-dark-secondary: #8383b0;
+  --bg-dark-secondary-highlight: #adade0;
+  --bg-dark-highlight: #dcdcf2;
+
 
   --bg-light-primary: white; 
   --bg-light-highlight: #333366;
@@ -68,6 +71,27 @@ a {
 .pb2 { padding-bottom: 2rem }
 .pb3 { padding-bottom: 3rem }
 .pb4 { padding-bottom: 0.5rem }
+
+.btn-learnmore {
+  background: var(--bg-dark-secondary);
+  color: var(--txt-light-primary);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.8rem;
+  display: block;
+  margin: auto; 
+  margin-top: 0.5rem;
+  transition-duration: 0.4s;
+
+}
+.btn-learnmore:hover {
+  background: var(--bg-dark-secondary-highlight);
+  color: var(--txt-light-primary);
+  cursor: pointer;
+}
 
 
 /* Header Bar */
@@ -152,6 +176,7 @@ a {
     background: var(--bg-dark-highlight);
     color: #333366;
     border-radius: 1px;
+    transition-duration: 0.4s;
   }
 
 /* Sub menus hidden by default*/
@@ -161,28 +186,36 @@ a {
     background: var(--bg-dark-highlight)0;
     color: var(--txt-dark-primary);
     border-radius: 1px;
+    transition-duration: 0.4s;
   }
   .submenu-cottages {
-    display: none;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
+    width:0;
+    left: 0;
   }
+
+  /* #navbar ul li.dropdown .submenu-cottages {
+    transition: visibility 0.4s ease-in; }*/
+  
   #navbar ul li.dropdown:hover .submenu-cottages {
     display: block;
-    visibility: visible;
-    position: absolute;
-    left: 0;
+    opacity: 1;
+    transition-duration: 0.4s;
+    pointer-events: auto;
     margin-top: 0.4rem;
     margin-bottom: 0.2rem;
-    /* margin-left: 0.3rem; */
     width: 365px;
+    height: auto;
     background: var(--bg-dark-primary);
     color: var(--txt-dark-primary);
     display: grid;
       grid-template-columns: 1fr;
-      /* grid-template-rows: repeat(4,100px); */
-      /* grid-row-gap: 0.1rem; */
     padding: 5px;
-    /* padding-top: 7px; */
-    transition: visibility 1s ease-in-out;
+
   }
 
   .card {
@@ -195,6 +228,7 @@ a {
 
   #navbar ul li.dropdown:hover .submenu-cottages .card:hover {
     background: var(--txt-light-primary);
+    transition-duration: 0.4s;
   }
 
   .box{ 
@@ -254,7 +288,8 @@ a {
   display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-row-gap: 1rem;
-  background: #fff
+  background: #fff;
+  justify-items: center;
 }
 
 .article {
