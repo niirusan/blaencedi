@@ -11,9 +11,10 @@
   --font-serif:'Scheheradze', serif;
   /* colours */
   --bg-dark-primary: #141e28;
-  --bg-dark-highlight: #a3c1e0;
+  --bg-dark-highlight: #efeff9;
 
-  --bg-light-primary: #fff; 
+  --bg-light-primary: white; 
+  --bg-light-highlight: #333366;
 
   --txt-dark-primary: #333366;
   --txt-light-primary:  #efeff9;
@@ -293,5 +294,12 @@ a {
   overflow: hidden;
   width: 203px;
   height: 125px;
+}
+
+#feedbacktxt {
+  font-style: italic;
+}
+#feedbacktxt + p{
+  font-weight: bold;
 }
 /* Footer */
